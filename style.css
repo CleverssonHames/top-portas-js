@@ -1,5 +1,8 @@
 body {
-  background-color: rgb(27, 27, 27);
+  /*background-color: rgb(27, 27, 27);*/
+  background-image: url(img/Você-logo-consegue-abrir-a-porta-do-carro…-sem-a-chave.jpg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right, left; 
 }
 
 .title {
@@ -97,4 +100,8 @@ td {
   width: 80px;
   background-color: whitesmoke;
   border: hidden;
+}
+
+.form-item button {
+  height: 20px;
 }
