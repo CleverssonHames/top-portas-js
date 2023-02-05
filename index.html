@@ -5,10 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
   <title>TOP PORTAS - NOTAS</title>
 </head>
 <body>
-  <main>
+  <main id="container">
     <section class="box">
       <h1 class="title">Dados do proprietário e veículo</h1>
       <form class="form-proprietario">
@@ -18,11 +21,11 @@
         </div>
         <div>
           <label for="">Contato:</label>
-          <input type="text" id="Telefone:" placeholder="(99) 99999-9999" style="width: 100px;">
+          <input type="tel" id="Telefone:" placeholder="(99) 99999-9999" style="width: 100px;">
         </div>
         <div>
           <label for="">E-mail:</label>
-          <input type="text" id="email" style="width: 180px;" placeholder="email@dominio.com">
+          <input type="email" id="email" style="width: 180px;" placeholder="email@dominio.com">
         </div>
       </form>
       <form class="form-veiculo">
@@ -93,7 +96,7 @@
         </div>
         <div>
           <label for="">Total a pagar:</label>
-          <input type="text" id="valor-pagar">
+          <input type="text" id="valor-pagar" readonly>
         </div>
       </div>
       

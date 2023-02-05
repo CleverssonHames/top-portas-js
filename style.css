@@ -1,8 +1,26 @@
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: small;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: auto;
+  min-height: 100vh;
+}
+
+input:focus {
+  outline: none;
+}
+
 body {
-  /*background-color: rgb(27, 27, 27);*/
-  background-image: url(img/Você-logo-consegue-abrir-a-porta-do-carro…-sem-a-chave.jpg);
+  background-color: rgb(27, 27, 27);
+  /*background-image: url(img/Você-logo-consegue-abrir-a-porta-do-carro…-sem-a-chave.jpg);*/
   background-repeat: no-repeat, no-repeat;
-  background-position: right, left; 
+  background-position: right, left;
+  padding: 2rem auto;
 }
 
 .title {
@@ -80,6 +98,7 @@ table, th, td {
 th {
   background-color: darkturquoise;
   padding: 5px;
+  font-size: 1.2rem;
   }
 
 td {

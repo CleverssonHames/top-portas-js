@@ -43,6 +43,7 @@ var insereItens = function() {
     limpaInput()
     listaItens()
     elTableTtItens.innerText = calcTotalItem()
+    calcTotalPagar()
   }
 }
 btInserir.onclick = insereItens
