@@ -1,0 +1,100 @@
+body {
+  background-color: rgb(27, 27, 27);
+}
+
+.title {
+  color: white;
+  font-size: x-large;
+  border-bottom: 1px solid grey;
+  padding-bottom: 1rem;
+}
+
+.box {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 600px;
+  padding: 20px;
+  background-color: rgb(77, 77, 77);
+}
+
+.box-item {
+  display: flex;
+  width: 600px;
+}
+
+.form-item, .form-proprietario, .form-veiculo {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.form-proprietario label {
+  color: white;
+}
+
+.form-proprietario input {
+  padding: 10px;
+  margin-right: 5px;
+  width: 80px;
+  background-color: whitesmoke;
+  border: hidden;
+}
+
+.form-veiculo label {
+  color: white;
+}
+
+.form-veiculo input {
+  padding: 10px;
+  margin-right: 5px;
+  width: 80px;
+  background-color: whitesmoke;
+  border: hidden;
+}
+
+.form-item label {
+  color: white;
+}
+
+.form-item input {
+  padding: 10px;
+  margin-right: 5px;
+  width: 80px;
+  background-color: whitesmoke;
+  border: hidden;
+}
+
+
+/* CSS Tabela de itens */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border-bottom: 1px solid whitesmoke;
+}
+
+th {
+  background-color: darkturquoise;
+  padding: 5px;
+  }
+
+td {
+  padding: 3px;
+  text-align: center;
+  color: white;
+}
+
+/* CSS valores*/ 
+.total-pagar {
+  display: flex;
+  color: white;
+}
+
+.total-pagar input {
+  padding: 10px;
+  margin-right: 5px;
+  width: 80px;
+  background-color: whitesmoke;
+  border: hidden;
+}

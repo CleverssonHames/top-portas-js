@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <section class="box">
+      <h1 class="title">Dados do proprietário e veículo</h1>
+      <form class="form-proprietario">
+        <div>
+          <label for="">Nome completo</label>
+          <input type="text" id="nome-completo" style="width: 250px;">
+        </div>
+        <div>
+          <label for="">Contato:</label>
+          <input type="text" id="Telefone:" placeholder="(99) 99999-9999" style="width: 100px;">
+        </div>
+        <div>
+          <label for="">E-mail:</label>
+          <input type="text" id="email" style="width: 180px;" placeholder="email@dominio.com">
+        </div>
+      </form>
+      <form class="form-veiculo">
+        <div>
+          <label for="">Modelo | Ano</label>
+          <input type="text" id="modelo-veiculo" style="width: 250px;">
+        </div>
+        <div>
+          <label for="">Cor</label>
+          <input type="text" id="cor-veiculo" style="width: 120px;">
+        </div>
+        <div>
+          <label for="">Placa</label>
+          <input type="text" id="email" style="width: 160px;" placeholder="AAA 0000">
+        </div>
+      </form>
+    </section>
+    <section class="box">
+      <h1 class="title">Inserir itens</h1>
+      <form class="form-item">
+        <div>
+          <label for="">Quantidade:</label>
+          <input type="number" id="quantidade" placeholder="Quantidade" required>
+        </div>
+        <div>
+          <label for="">Descrição:</label>
+          <input type="text" id="descricao" placeholder="descricao" style="width: 210px;" required>
+        </div>
+        <div>
+          <label for="">Valor Unitário</label>
+          <input type="text" id="valor" placeholder="0.00" required>
+        </div>
+        <div>
+          <label for="">Total</label>
+          <input type="text" id="total" placeholder="0.00" readonly>
+        </div>
+        <button id="insere">Inserir</button>
+      </div>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Seq</th>
+          <th >Quantidade</th>
+          <th style="width: 200px;">Descrição</th>
+          <th>Preço</th>
+          <th>Total</th>
+          <th>Alterar</th>
+          <th>Excluir</th>
+        </tr>
+      </thead>
+      <tbody id="lista-itens">
+      </tbody>
+      <tfoot>
+        <tr style="background-color: darkturquoise;">
+          <th colspan="4" style="text-align: left; color: black; ">Valor total dos itens:</th>
+          <th colspan="3" style="text-align: left; color: black" id="total-itens-tab">0.00</th>
+        </tr>
+      </tfoot>
+    </table>
+    </section>
+    <section class="box">
+      <h1 class="title">Valores</h1>
+      <div class="total-pagar">
+        <div>
+          <label for="">Desconto</label>
+          <input type="text" id="desconto">
+        </div>
+        <div>
+          <label for="">Total a pagar:</label>
+          <input type="text" id="valor-pagar">
+        </div>
+      </div>
+      
+      
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
