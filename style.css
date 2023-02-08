@@ -1,14 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
 html {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Muli', sans-serif;
   font-size: small;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  height: 100vh;
 }
 
 html, body {
   height: auto;
   min-height: 100vh;
+}
+
+.container {
+  align-content: center;
+  
 }
 
 input:focus {
@@ -20,7 +28,9 @@ body {
   /*background-image: url(img/Você-logo-consegue-abrir-a-porta-do-carro…-sem-a-chave.jpg);*/
   background-repeat: no-repeat, no-repeat;
   background-position: right, left;
-  padding: 2rem auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .title {
@@ -96,9 +106,10 @@ table, th, td {
 }
 
 th {
-  background-color: darkturquoise;
+  background-color: rgba(209, 0, 174, 0.274);
   padding: 5px;
   font-size: 1.2rem;
+  color: white;
   }
 
 td {
