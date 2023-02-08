@@ -48,9 +48,12 @@ body {
   background-color: rgb(77, 77, 77);
 }
 
-.box-item {
+.box-2 {
   display: flex;
   width: 600px;
+  padding: 20px;
+  background-color: rgba(77, 77, 77, 0);
+  justify-content: end;
 }
 
 .form-item, .form-proprietario, .form-veiculo {
@@ -60,6 +63,7 @@ body {
 
 .form-proprietario label {
   color: white;
+  margin-bottom: 2px;
 }
 
 .form-proprietario input {
@@ -122,6 +126,7 @@ td {
 .total-pagar {
   display: flex;
   color: white;
+  justify-content: end;
 }
 
 .total-pagar input {
@@ -133,11 +138,17 @@ td {
 }
 
 .form-item button {
-  height: 20px;
+  height: 40px;
+  background-color: purple;
+  width: 50px;
+  color: white;
+  border: none;
 }
 
-.insere-button {
-  height: 80px;
-  width: 50px;
+.btn-standard {
+  height: 35px;
   background-color: purple;
+  width: 80px;
+  color: white;
+  border: none;
 }
