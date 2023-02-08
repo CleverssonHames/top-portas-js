@@ -102,11 +102,11 @@ table {
 }
 
 table, th, td {
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 1px solid purple;
 }
 
 th {
-  background-color: rgba(209, 0, 174, 0.274);
+  background-color: purple;
   padding: 5px;
   font-size: 1.2rem;
   color: white;
