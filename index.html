@@ -4,101 +4,109 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
   <title>TOP PORTAS - NOTAS</title>
 </head>
 <body>
   <main id="container">
-    <section class="box">
-      <h1 class="title">Dados do proprietário e veículo</h1>
-      <form class="form-proprietario">
-        <div>
-          <label for="">Nome completo</label>
-          <input type="text" id="nome-completo" style="width: 250px;">
+    <form action="">
+
+      <section id="capa-nota" class="box">
+        <h1 class="title">Dados do proprietário e veículo</h1>
+        <div class="form-proprietario">
+          <div>
+            <label for="">Nome completo</label>
+            <input type="text" id="nome-completo" style="width: 250px;">
+          </div>
+          <div>
+            <label for="">Contato:</label>
+            <input type="tel" id="Telefone:" placeholder="(99) 99999-9999" style="width: 100px;">
+          </div>
+          <div>
+            <label for="">E-mail:</label>
+            <input type="email" id="email" style="width: 180px;" placeholder="email@dominio.com">
+          </div>
         </div>
-        <div>
-          <label for="">Contato:</label>
-          <input type="tel" id="Telefone:" placeholder="(99) 99999-9999" style="width: 100px;">
+        <div class="form-veiculo">
+          <div>
+            <label for="">Modelo | Ano</label>
+            <input type="text" id="modelo-veiculo" style="width: 250px;">
+          </div>
+          <div>
+            <label for="">Cor</label>
+            <input type="text" id="cor-veiculo" style="width: 120px;">
+          </div>
+          <div>
+            <label for="">Placa</label>
+            <input type="text" id="email" style="width: 160px;" placeholder="AAA 0000">
+          </div>
         </div>
-        <div>
-          <label for="">E-mail:</label>
-          <input type="email" id="email" style="width: 180px;" placeholder="email@dominio.com">
+      </section>
+
+      <section id="itens-nota" class="box">
+        <h1 class="title">Inserir itens</h1>
+        <div class="form-item">
+          <div>
+            <label for="">Quantidade:</label>
+            <input type="number" id="quantidade" placeholder="Quantidade" required>
+          </div>
+          <div>
+            <label for="">Descrição:</label>
+            <input type="text" id="descricao" placeholder="descricao" style="width: 210px;" required>
+          </div>
+          <div>
+            <label for="">Valor Unitário</label>
+            <input type="text" id="valor" placeholder="0.00" required>
+          </div>
+          <div>
+            <label for="">Total</label>
+            <input type="text" id="total" placeholder="0.00" readonly>
+          </div>
+          <div>
+            <button class="insere-button" id="insere"><i class="fas fa-sign-in-alt fa-2xl"></i></button>
+          </div>
         </div>
-      </form>
-      <form class="form-veiculo">
-        <div>
-          <label for="">Modelo | Ano</label>
-          <input type="text" id="modelo-veiculo" style="width: 250px;">
+        <table>
+          <thead>
+            <tr>
+              <th>Seq</th>
+              <th >Quantidade</th>
+              <th style="width: 200px;">Descrição</th>
+              <th>Preço</th>
+              <th>Total</th>
+              <th>Alterar</th>
+              <th>Excluir</th>
+            </tr>
+          </thead>
+          <tbody id="lista-itens">
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="4" style="text-align: left; color: white; ">Valor total dos itens:</th>
+              <th colspan="3" style="text-align: left; color: white" id="total-itens-tab">0.00</th>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section id="totais-nota" class="box">
+        <h1 class="title">Valores</h1>
+        <div class="total-pagar">
+          <div>
+            <label for="">Desconto</label>
+            <input type="text" id="desconto">
+          </div>
+          <div>
+            <label for="">Total a pagar:</label>
+            <input type="text" id="valor-pagar" readonly>
+          </div>
         </div>
-        <div>
-          <label for="">Cor</label>
-          <input type="text" id="cor-veiculo" style="width: 120px;">
-        </div>
-        <div>
-          <label for="">Placa</label>
-          <input type="text" id="email" style="width: 160px;" placeholder="AAA 0000">
-        </div>
-      </form>
-    </section>
-    <section class="box">
-      <h1 class="title">Inserir itens</h1>
-      <form class="form-item">
-        <div>
-          <label for="">Quantidade:</label>
-          <input type="number" id="quantidade" placeholder="Quantidade" required>
-        </div>
-        <div>
-          <label for="">Descrição:</label>
-          <input type="text" id="descricao" placeholder="descricao" style="width: 210px;" required>
-        </div>
-        <div>
-          <label for="">Valor Unitário</label>
-          <input type="text" id="valor" placeholder="0.00" required>
-        </div>
-        <div>
-          <label for="">Total</label>
-          <input type="text" id="total" placeholder="0.00" readonly>
-        </div>
-        <button id="insere">Inserir</button>
-      </div>
+      </section>
+
     </form>
-    <table>
-      <thead>
-        <tr>
-          <th>Seq</th>
-          <th >Quantidade</th>
-          <th style="width: 200px;">Descrição</th>
-          <th>Preço</th>
-          <th>Total</th>
-          <th>Alterar</th>
-          <th>Excluir</th>
-        </tr>
-      </thead>
-      <tbody id="lista-itens">
-      </tbody>
-      <tfoot>
-        <tr style="background-color: darkturquoise;">
-          <th colspan="4" style="text-align: left; color: white; ">Valor total dos itens:</th>
-          <th colspan="3" style="text-align: left; color: white" id="total-itens-tab">0.00</th>
-        </tr>
-      </tfoot>
-    </table>
-    </section>
-    <section class="box">
-      <h1 class="title">Valores</h1>
-      <div class="total-pagar">
-        <div>
-          <label for="">Desconto</label>
-          <input type="text" id="desconto">
-        </div>
-        <div>
-          <label for="">Total a pagar:</label>
-          <input type="text" id="valor-pagar" readonly>
-        </div>
-      </div>
-      
-      
-    </section>
   </main>
   <script src="index.js"></script>
 </body>

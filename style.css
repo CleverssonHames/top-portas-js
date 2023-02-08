@@ -135,3 +135,9 @@ td {
 .form-item button {
   height: 20px;
 }
+
+.insere-button {
+  height: 80px;
+  width: 50px;
+  background-color: purple;
+}
