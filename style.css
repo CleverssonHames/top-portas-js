@@ -98,6 +98,11 @@ body {
   border: hidden;
 }
 
+.form-item input:hover {
+  border: groove;
+  box-shadow: 3px;
+}
+
 
 /* CSS Tabela de itens */
 table {
@@ -106,11 +111,11 @@ table {
 }
 
 table, th, td {
-  border-bottom: 1px solid purple;
+  border-bottom: 1px solid rgb(168, 63, 168);
 }
 
 th {
-  background-color: purple;
+  background-color: rgb(168, 63, 168);
   padding: 5px;
   font-size: 1.2rem;
   color: white;
@@ -143,6 +148,10 @@ td {
   width: 50px;
   color: white;
   border: none;
+}
+
+button:hover {
+  background-color: rgb(168, 63, 168)
 }
 
 .btn-standard {
