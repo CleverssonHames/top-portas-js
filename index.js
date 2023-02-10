@@ -10,9 +10,17 @@ var elBodyTable = document.getElementById("lista-itens")
 var elTableTtItens = document.getElementById("total-itens-tab")
 var elDesconto = document.getElementById("desconto")
 var elValorPagar = document.getElementById("valor-pagar")
+const elTabelaItens = document.getElementById("tabela-itens")
 
 // valor inical do desconto
 elDesconto.value = 0
+
+$(function(){
+  $(".mascara").maskMoney({
+     allowNegative: true,
+     decimal: '.'
+  });
+});
 
 
 var limpaInput = function () {
@@ -42,8 +50,9 @@ var insereItens = function() {
     itens.push(objItem)
     limpaInput()
     listaItens()
-    elTableTtItens.innerText = calcTotalItem()
+    calcTotalItem()
     calcTotalPagar()
+    elTabelaItens.removeAttribute('hidden')
   }
 }
 btInserir.onclick = insereItens
@@ -59,7 +68,7 @@ var calcTotalItem = function() {
   for(var i = 0; i < itens.length; i++ ) {
     sum+=parseFloat(itens[i].valorTotal);
   }
-  return sum
+  elTableTtItens.innerText = sum
 }
 
 var calcTotalPagar = function() {
@@ -97,13 +106,13 @@ var listaItens = function () {
     
     var elActionAlteA = document.createElement("button")
     elActionAlteA.setAttribute('value', indice)
-    elActionAlteA.innerText = 'Alterar'
+    elActionAlteA.setAttribute('class', "fas fa-pen")
 
     var elActionDel = document.createElement("td")
     
     var elActionDelB = document.createElement("button")
     //elActionDelB.setAttribute('value', indice)
-    elActionDelB.setAttribute('class', 'remove-item')
+    elActionDelB.setAttribute('class', "fas fa-trash")
     elActionDelB.addEventListener('click', function() {
       itens.forEach(function(item, _indice){
         if (indice == _indice) {
@@ -111,8 +120,10 @@ var listaItens = function () {
         }
       })
       listaItens()
+      calcTotalItem()
+      calcTotalPagar()
     })
-    elActionDelB.innerText = 'Excluir'
+    
 
     // mostrar elementos na web
     rowTrEl.appendChild(elIndice)

@@ -8,6 +8,8 @@
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
     crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
   <title>TOP PORTAS - NOTAS</title>
 </head>
 <body>
@@ -59,17 +61,17 @@
           </div>
           <div>
             <label for="">Valor Unitário</label>
-            <input type="text" id="valor" placeholder="0.00" required>
+            <input class="mascara" type="text" id="valor" placeholder="0.00" required>
           </div>
           <div>
             <label for="">Total</label>
-            <input type="text" id="total" placeholder="0.00" readonly>
+            <input class="mascara" type="tel" id="total" placeholder="0.00" readonly>
           </div>
           <div>
             <button class="insere-button" id="insere"><i class="fas fa-sign-in-alt fa-2xl"></i></button>
           </div>
         </div>
-        <table>
+        <table id="tabela-itens" hidden>
           <thead>
             <tr>
               <th>Seq</th>
@@ -111,5 +113,6 @@
     </form>
   </main>
   <script src="index.js"></script>
+  
 </body>
 </html>

@@ -50,8 +50,7 @@ body {
 
 .box-2 {
   display: flex;
-  width: 600px;
-  padding: 20px;
+  padding-top: 20px;
   background-color: rgba(77, 77, 77, 0);
   justify-content: end;
 }
@@ -148,9 +147,10 @@ td {
   width: 50px;
   color: white;
   border: none;
+  align-items: end;
 }
 
-button:hover {
+.form-item button:hover {
   background-color: rgb(168, 63, 168)
 }
 
@@ -160,4 +160,8 @@ button:hover {
   width: 80px;
   color: white;
   border: none;
+}
+
+.btn-standard:hover {
+  background-color: rgb(168, 63, 168)
 }
