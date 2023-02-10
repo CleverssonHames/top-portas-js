@@ -52,20 +52,20 @@
         <h1 class="title">Itens da ordem</h1>
         <div class="form-item">
           <div>
-            <label for="">Quantidade:</label>
-            <input type="number" id="quantidade" placeholder="Quantidade" required>
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" placeholder="Quantidade" required>
           </div>
           <div>
-            <label for="">Descrição:</label>
-            <input type="text" id="descricao" placeholder="descricao" style="width: 210px;" required>
+            <label for="descricao">Descrição:</label>
+            <input type="text" id="descricao" name="descricao" placeholder="descricao" style="width: 210px;" required>
           </div>
           <div>
-            <label for="">Valor Unitário</label>
-            <input class="mascara" type="text" id="valor" placeholder="0.00" required>
+            <label for="valor">Valor Unitário</label>
+            <input class="currency" type="text" id="valor" name="valor" placeholder="0.00" required>
           </div>
           <div>
-            <label for="">Total</label>
-            <input class="mascara" type="tel" id="total" placeholder="0.00" readonly>
+            <label for="total">Total</label>
+            <input  type="text" id="total" placeholder="0.00" readonly>
           </div>
           <div>
             <button class="insere-button" id="insere"><i class="fas fa-sign-in-alt fa-2xl"></i></button>
@@ -99,11 +99,11 @@
         <div class="total-pagar">
           <div>
             <label for="">Desconto</label>
-            <input type="text" id="desconto">
+            <input class="currency" type="text" id="desconto">
           </div>
           <div>
             <label for="">Total a pagar:</label>
-            <input type="text" id="valor-pagar" readonly>
+            <input class="real" type="text" id="valor-pagar" readonly>
           </div>
         </div>
       </section>

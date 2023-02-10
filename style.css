@@ -60,6 +60,7 @@ body {
   margin-bottom: 1rem;
 }
 
+
 .form-proprietario label {
   color: white;
   margin-bottom: 2px;
@@ -98,8 +99,8 @@ body {
 }
 
 .form-item input:hover {
-  border: groove;
-  box-shadow: 3px;
+  border: outset;
+  box-shadow: 1px;
 }
 
 
@@ -147,7 +148,7 @@ td {
   width: 50px;
   color: white;
   border: none;
-  align-items: end;
+  vertical-align: bottom;
 }
 
 .form-item button:hover {

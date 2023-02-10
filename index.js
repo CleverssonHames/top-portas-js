@@ -15,11 +15,12 @@ const elTabelaItens = document.getElementById("tabela-itens")
 // valor inical do desconto
 elDesconto.value = 0
 
-$(function(){
-  $(".mascara").maskMoney({
-     allowNegative: true,
-     decimal: '.'
-  });
+$(document).ready(function(){
+  // Configuração padrão.
+  $(".currency").maskMoney();
+
+  // Configuração para campos de Real.
+  $(".real").maskMoney({showSymbol:true, symbol:"R$", decimal:",", thousands:"."});
 });
 
 
@@ -59,7 +60,7 @@ btInserir.onclick = insereItens
 
 var calculaTotal = function () {
   var _total = quantidade.value * parseFloat(valorUnitario.value)
-  valorTotal.value = _total
+  valorTotal.value = _total.toFixed(2)
 }
 valorUnitario.onblur = calculaTotal
 
@@ -68,13 +69,14 @@ var calcTotalItem = function() {
   for(var i = 0; i < itens.length; i++ ) {
     sum+=parseFloat(itens[i].valorTotal);
   }
-  elTableTtItens.innerText = sum
+  elTableTtItens.innerText = sum.toFixed(2)
+  return sum.toFixed(2)
 }
 
 var calcTotalPagar = function() {
   var _tti = calcTotalItem()
-  console.log(_tti)
-  elValorPagar.value = _tti - elDesconto.value
+  var _ttap = _tti - elDesconto.value
+  elValorPagar.value = _ttap.toFixed(2)
 }
 
 elDesconto.onblur =  calcTotalPagar
