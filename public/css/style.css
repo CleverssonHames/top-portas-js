@@ -99,7 +99,7 @@ body {
 }
 
 .form-item input:hover {
-  border: outset;
+  border: inset;
   box-shadow: 1px;
 }
 
