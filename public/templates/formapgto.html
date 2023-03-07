@@ -20,11 +20,23 @@
         <h1 class="title">Nova forma de pagamento</h1>
         <form action=""></form>
         <label for="descricao">Descrição</label>
-        <input type="text" name="descricao" id="descricao">
+        <input id="descricao" type="text" name="descricao" id="descricao">
       </section>
 
       <section id="lista-formapgto" class="box">
         <h1 class="title">Formas de pagamentos cadastradas</h1>
+        <table border="1">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>DESCRIÇÃO</th>
+              <th>AÇÕES</th>
+            </tr>
+          </thead>
+          <tbody id="listFormPag">
+
+          </tbody>
+        </table>
       </section>
   </main>
   <script src="/src/js/formapgto.js"></script>
